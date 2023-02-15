@@ -1,4 +1,4 @@
-package ArraysAndHashing;
+package ArraysAndHashing.Easy;
 
 
 public class LengthOfLastWord {
