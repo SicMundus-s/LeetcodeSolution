@@ -1,0 +1,22 @@
+package ArraysAndHashing.Easy;
+
+public class FindPivotIndex {
+    public static void main(String[] args) {
+        int[] nums = {4,4,5,6,2};
+        System.out.println(findPivot(nums));
+    }
+
+    public static int findPivot(int[] nums) {
+        if(nums.length == 0) return - 1;
+        int leftSum = 0, rightSum = 0;
+        for(int num : nums)
+            rightSum += num;
+
+        for(int i = 0; i < nums.length; i ++) {
+            rightSum -= nums[i];
+            if(rightSum == leftSum) return i;
+            leftSum += nums[i];
+        }
+        return - 1;
+    }
+}
